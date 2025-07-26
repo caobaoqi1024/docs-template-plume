@@ -3,7 +3,7 @@ import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export default defineUserConfig({
-  base: '/docs-template-plume/',
+  base: (process.env.VUEPRESS_BASE as `/${string}/`) || '/docs-template-plume/',
   lang: 'zh-CN',
   title: 'Mao Ni Tai Mei',
   description: 'good good study,day day up',
